@@ -1,0 +1,30 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<table id="courseDataList" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Tên khóa học</th>
+            <th>giá khóa học</th>
+            <th>trạng thái</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>#</th>
+            <th>Tên khóa học</th>
+            <th>giá khóa học</th>
+            <th>trạng thái</th>
+        </tr>
+    </tfoot>
+</table>
+<script>
+    $(document).ready(function(){
+        $('#courseDataList').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": "http://localhost/courses/controllers/api/course.php"
+        });
+    });
+</script>

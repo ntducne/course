@@ -1,0 +1,10 @@
+node_modules
+bun.lockb
+yarn.lock
+package-lock.json
+.idea
+.vscode
+.DS_Store
+.env
+vendor
+composer.lock
